@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tax Computation</title>
+
+	<!-----------Javascript Here------------------------->
+	<script src="tax.js"> </script>
+
+</head>
+<body style="text-align: center;" >
+
+	<h1>Philippine Tax Computation Calculator</h1>
+	<h3>Created by: Kobe Garcia</h3>
+	<h4>Description: This program will compute for the tax to pay with the use of following inputs: <br>
+	       Income, Number of Dependents, Government Employee or not.</h4>
+	<br>
+
+	<!-----------------Input box------------------------->
+	Income: <input type="text" name="income" id="income">
+	<br>
+	Number of Dependents: <input type="text" name="dependents" id="dependents">
+	<br>
+	Government Employee: Yes <input type="checkbox" name="yes" id="yes" value="true"> No <input type="checkbox" name="no" id="no" value="true"> 
+	<br>
+	<button onclick="maindisplay()"> Calculate </button>
+	<br>
+	<!-------Result------->
+	<h1 id="display-result"></h1>
+
+	
+</body> 
+</html>
