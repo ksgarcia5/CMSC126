@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="units.css">  <!---- link the css ----->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  <!---- link the jquery ---->
+
+    <!---- Title of the Page ---->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Nunito">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College of Science and Mathematics</title> <!---- Title of the Page ---->
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="main.html"><img src="images/UP_logo.png"></a><!----- if the user will click the UP logo, it will go to the indicated html --->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">HOME</a></li> <!---- links to the home.html ---->
+                    <li class = "dropdown"><a href="">ACADEMIC UNITS</a> <!----- select menu ----->
+                        <ul>
+                            <!----- links to respective colleges/school ----->
+                            <li><a href="chs.html">College of Humanities and Social Sciences</a></li>
+                            <li><a href="csm.html">College of Science and Mathematics</a></li>
+                            <li><a href="sm.html">School of Management</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="programs.html">ACADEMIC PROGRAMS</a></li> <!----- links to academic programs page ----->
+                    <li><a href="signup.html">SIGN-UP</a></li> <!----- links to sign-up page ----->
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <div class="content">
+        <h1>COLLEGE OF SCIENCE AND MATHEMATICS</h1> <br>
+
+        <p>
+            On June 1996, the College of Arts and Sciences and the School of Management were created. After a year, 
+            the CAS was split into the College of Humanities and Social Sciences and the College of Science and Mathematics.
+        </p>
+
+        <div>
+            <h3>Degree Programs</h3>
+            <div class="deg-progs">
+                <span class="progs">BS Applied Mathematics</span>
+                <span class="progs">BS Biology</span>
+                <span class="progs">BS Computer Science</span>
+                <span class="progs">BS Food Technology</span>
+                <span class="progs">MS Food Science</span>
+            </div><br><br>
+
+            <h3>College of Science and Mathematics (CSM) Contacts</h3><br>
+            <div>
+                <table> <!----- display contacts using table ----->
+                    <tr>
+                        <th>Office of the Dean</th>
+                        <td>0949 850 1074 (Smart)</td>
+                        <td>csm.upmindanao@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>0975 571 9174 (Globe)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Office of the College Secretary</th>
+                        <td>0922 432 3251</td>
+                        <td>csmcs.upmindanao@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>rtgamot@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <th>Dept. of Biological Science and Environmental Studies</th>
+                        <td>0925 340 5661</td>
+                        <td>rugamboa@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>0927 059 1168</td>
+                        <td>clnanola@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>0921 915 2232</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>DBSES Laboratory (GI Catabas)</td>
+                        <td></td>
+                        <td>gicatabas@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <th>Dept. of Food Science and Chemistry</th>
+                        <td>0955 071 1053</td>
+                        <td>jaalviola@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <td>DFSC Laboratory (MC Aborde)</td>
+                        <td></td>
+                        <td>mcaborde@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <th>Dept. of Mathematics, Physics, and Computer Science</th>
+                        <td>(082)293 0303</td>
+                        <td>dmpcs-csm.upmindanao@up.edu.ph</td>
+                    </tr>
+                    <tr>
+                        <td>DMPCS Laboratory (AG Solis)</td>
+                        <td></td>
+                        <td>agsolis1@up.edu.ph</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!----- jquery for the select menu (academic units) ----->
+    <script>
+        $('.dropdown > a').click(function(){
+            // self clicking menu dropdown type
+                $(this).parent().siblings().find('ul').fadeOut(500);
+                  $(this).next('ul').stop(true, false, true).fadeToggle(500);
+                  return false;
+        });
+    </script>
+    
+</body>
+</html>
