@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css"> <!---- link the css ----->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!---- link the jquery ---->
+
+    <!---- font used for the website ---->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Nunito">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of the Philippines Mindanao</title> <!---- Title of the Page ---->
+</head>
+<body>
+    <section class="header">
+         <!---- navigation bar ---->
+        <nav>
+            <a href="main.html"><img src="images/UP_logo.png"></a> <!----- if the user will click the UP logo, it will go to the indicated html --->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="home.html">HOME</a></li><!---- links to the home.html ---->
+                    <li class = "dropdown"><a href="">ACADEMIC UNITS</a><!----- select menu ----->
+                        <ul>
+                             <!----- links to respective colleges/school ----->
+                            <li><a href="chs.html">College of Humanities and Social Sciences</a></li>
+                            <li><a href="csm.html">College of Science and Mathematics</a></li>
+                            <li><a href="sm.html">School of Management</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="programs.html">ACADEMIC PROGRAMS</a></li><!----- links to academic programs page ----->
+                    <li><a href="signup.html">SIGN-UP</a></li><!----- links to sign-up page ----->
+                </ul>
+            </div>
+        </nav>
+
+    <div class="text-box">
+        <h1>UNIVERSITY OF THE PHILIPPINES MINDANAO</h1>
+        <p>Shaping minds that shape the nation</p>
+    </div>
+    </section>
+
+    <!---- jquery for the select menu (academic units) --->
+    <script>
+        $('.dropdown > a').click(function(){
+            // self clicking menu dropdown type
+                $(this).parent().siblings().find('ul').fadeOut(500);
+                  $(this).next('ul').stop(true, false, true).fadeToggle(500);
+                  return false;
+        });
+    </script>
+        
+</body>
+</html>
